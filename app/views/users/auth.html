@@ -1,0 +1,22 @@
+{% extends "layouts/default.html" %}
+
+	{% block content %}
+		<div class="row">
+			<div class="span6">
+				{% if errors %}
+					<div class="fade in alert alert-block alert-error">
+						<a class="close" data-dismiss="alert" href="javascript:void(0)">x</a>
+						<ul>
+							{% for error in errors %}
+								<li> {{ error.type }} </li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% else %}
+					{% block auth %}
+
+					{% endblock %}
+				{% endif %}
+			</div>
+		</div>
+	{% endblock %}

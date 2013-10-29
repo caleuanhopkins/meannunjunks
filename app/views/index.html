@@ -1,0 +1,10 @@
+{% extends "layouts/default.html" %}
+
+	{% block content %}
+		<section data-ng-view="">
+			
+		</section>
+		<script type="text/javascript">
+			window.user = {{ user }};
+		</script>
+	{% endblock %}

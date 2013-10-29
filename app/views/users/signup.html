@@ -1,0 +1,39 @@
+{% extends "users/auth.html" %}
+
+  {% block auth %}
+    <form action="/users" method="post" role="form" class="form-horizontal">
+      <div class="form-group">
+        <label class="col-lg-2 control-label" for="name">Full Name</label>
+        <div class="col-lg-10">
+          <input class="form-control Text input" id="name" type="text" name="name" placeholder="Full Name" value="{{ user.name }}" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-lg-2 control-label" for="email">Email</label>
+        <div class="col-lg-10">
+          <input class="form-control email input" id="email" type="email" name="email" placeholder="Email" value="{{ user.email }}" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-lg-2 control-label" for="username">Username</label>
+        <div class="col-lg-10">
+          <input class="form-control Text input"  id="username" type="text" name="username" placeholder="Username" value="{{ user.username }}" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-lg-2 control-label" for="password">Password</label>
+        <div class="col-lg-10">
+          <input class="form-control input password" id="password" type="password" name="password" placeholder="Password" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+          <button class="btn btn-primary" type="submit">Sign Up</button>
+          &nbsp;
+          | or&nbsp;
+        <a href="/signin" class="show-login">login</a>
+        </div>
+      </div>
+    </form>
+
+  {% endblock %}
