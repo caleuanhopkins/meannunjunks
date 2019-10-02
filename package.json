@@ -33,7 +33,7 @@
     , "forever": "latest"
     , "mean-logger": "latest"
     , "bower": "latest"
-    , "nunjucks": "~0.1.10"
+    , "nunjucks": "^3.2.0"
   }
   , "devDependencies": {
         "supertest": "latest"
